@@ -154,4 +154,12 @@ fun main(){
         z -= 2
     }
     println("\nwhile loop is done")
+
+
+    // Do While loop
+    do{
+        println("\n$y")
+        y++
+    }while (y <= 10)
+    println("\ndo while loop is done")
 }
