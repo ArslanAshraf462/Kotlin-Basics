@@ -12,6 +12,13 @@ fun main(){
 //    var ohnPeterson = Person(lastName = "Peterson")
     myFunction(5)
     //b = 5
+
+    // Lateinit Plus Setters And Getters
+    var myCar = Car()
+    println("brand is : ${myCar.myBrand}")
+    myCar.maxSpeed = 200
+    println("Max Speed is : ${myCar.maxSpeed}")
+    println("Model is ${myCar.myModel}")
 }
 class Person(firstName: String = "John", lastName: String = "Doe"){
     // Member variable - properties
@@ -44,4 +51,28 @@ fun myFunction(a:Int){
     // a is a variable
     var b = 4
     println("a is $b")
+}
+
+class Car(){
+    lateinit var  owner : String
+    val myBrand : String = "BMW"
+
+        // Custom getter
+    get() {
+        return field.toLowerCase()
+    }
+
+    var maxSpeed: Int = 250
+    //get() = field
+    set(value) {
+        field = if (value > 0) value else throw IllegalArgumentException("Maxspeed cannot be less than 0")
+    }
+
+    var myModel : String = "M5"
+    private set
+
+    init {
+        this.myModel = "M3  "
+        this.owner = "Frank"
+    }
 }
