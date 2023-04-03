@@ -141,6 +141,7 @@ fun main(){
         else -> println("\n$x is none of the above")
     }
 
+    // While loop
     var y = 1
     while(y <= 10){
         println("\n$y")
@@ -154,6 +155,16 @@ fun main(){
         z -= 2
     }
     println("\nwhile loop is done")
+
+    var feltTemp = "cold"
+    var roomTemp = 10
+    while (feltTemp == "cold"){
+        roomTemp++
+        if(roomTemp >= 20){
+            feltTemp = "comfy"
+            println("\nit's comfy now")
+        }
+    }
 
 
     // Do While loop
