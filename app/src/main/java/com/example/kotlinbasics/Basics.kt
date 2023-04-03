@@ -173,4 +173,21 @@ fun main(){
         y++
     }while (y <= 10)
     println("\ndo while loop is done")
+
+    // for loop
+    for (num in 1..10){
+        print("\n$num")
+    }
+    println("\n------------")
+    for(i in 1 until 10){ // Same as for(i in 1.until(10))
+        println("\n$i")
+    }
+    println("\n------------")
+    for(i in 10 downTo 1){
+        println("\n$i")
+    }
+    println("\n------------")
+    for(i in 10 downTo 1 step 2){ // Same as - for(i in 10.downTo(1).step(2))
+        println("\n$i")
+    }
 }
