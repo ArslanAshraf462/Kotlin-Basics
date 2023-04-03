@@ -218,8 +218,32 @@ fun main(){
     println("\n result is $results")
 
     var avg = avg(5.3,13.37)
-    println("\n Average is $avg")
+    println("\n Average is $avg\n")
 
+    // nullable types
+    var names : String = "Denis"
+    //names = null -> Compilation Error
+    var nullableName : String? = "Denis"
+    //nullableName = null
+
+    var len = names.length
+    var len2 = nullableName?.length
+    nullableName?.let { println(it.length) }
+    println(nullableName?.toLowerCase())
+   /* if(nullableName!= null) {
+        var len2 = nullableName.length
+    }else{
+        null
+    }*/
+   // nullables-Elvis Operator-Not null Assertion
+   // nullableName = null
+//   val namez = nullableName ?: "Guest" // ?: Elvis Operators
+//    print("\nname is $namez")
+
+    println("\n ${nullableName!!.toLowerCase()}")// not null assertion
+
+    //safe call operator
+    //val wifeAge: String? = user?.wife?.age ?: 0
 }
 fun avg(a:Double, b: Double) : Double{
     return (a+b)/2
