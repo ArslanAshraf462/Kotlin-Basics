@@ -190,4 +190,24 @@ fun main(){
     for(i in 10 downTo 1 step 2){ // Same as - for(i in 10.downTo(1).step(2))
         println("\n$i")
     }
+
+
+    // Break and Continue
+    for(i in 1 until 20){
+        print("\n$i")
+        if (i/2 == 5){
+            break
+        }
+    }
+    println("\nDone with the break in loop")
+
+    for(i in 1 until 20){
+        // 10/2=5
+        // 11/2=5.5 which is 5 in term of an int
+        if (i/2 == 5){
+            continue
+        }
+        print("\n$i")
+    }
+    println("\nDone with the continue in loop")
 }
