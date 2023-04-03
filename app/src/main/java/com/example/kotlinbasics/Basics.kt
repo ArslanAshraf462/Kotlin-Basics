@@ -210,4 +210,25 @@ fun main(){
         print("\n$i")
     }
     println("\nDone with the continue in loop")
+
+    // functions
+    myFunction()
+    // arguments
+    var results = addUp(5,3)
+    println("\n result is $results")
+
+    var avg = avg(5.3,13.37)
+    println("\n Average is $avg")
+
+}
+fun avg(a:Double, b: Double) : Double{
+    return (a+b)/2
+}
+//Method - a Method is a Function within a class
+// Parameter(input)
+fun addUp(a:Int, b: Int) : Int{
+     return a+b
+}
+fun myFunction(){
+    print("\nCalled from myFunction")
 }
